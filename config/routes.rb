@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+  resources :welcome, only: :index do
+    collection do
+      get 'callbacks'
+    end
+  end
+
+  resources :users, only: [:index] do
+    collection do
+    end
+  end
+
   root 'welcome#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

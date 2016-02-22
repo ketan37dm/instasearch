@@ -2,3 +2,11 @@
 <p>
   The time is now: <%= Time.now %>
 </p>
+
+<%= link_to "Aunthenticate with Instagram",
+            "https://instagram.com/oauth/authorize/?" +
+            "client_id=#{Instagram.client_id}" +
+            "&redirect_uri=#{Instagram.redirect_uri}" +
+            "&scope=likes+comments+public_content+relationships+follower_list" +
+            "&response_type=code"
+%>
